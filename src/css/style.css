@@ -7,3 +7,11 @@
     box-sizing: border-box;
     font-family: "Barlow Condensed", sans-serif;
 }
+
+header {
+    background-color: var(--color-neutral-4);
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
