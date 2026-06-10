@@ -8,6 +8,31 @@
     font-family: "Barlow Condensed", sans-serif;
 }
 
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+}
+
+.btn-default {
+    background-color: var(--color-primary-1);
+    color: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-primary-2);
+    }
+}
+
+
 header {
     background-color: var(--color-neutral-4);
     padding: 12px 4%;
@@ -56,6 +81,10 @@ header {
                 }
             }
         }
+    }
+
+    .btn-default{
+        display: none;
     }
 }
 }
