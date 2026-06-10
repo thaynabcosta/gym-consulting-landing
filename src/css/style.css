@@ -9,6 +9,11 @@
     font-family: "Barlow Condensed", sans-serif;
 }
 
+#container {
+    background-image: url('../images/background-mobile.png');
+    background-size: contain;
+}
+
 a.btn {
     text-decoration: none;
 }
