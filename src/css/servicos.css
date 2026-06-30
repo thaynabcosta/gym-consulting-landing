@@ -1,0 +1,132 @@
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 32px;
+
+    .section-label {
+        color: var(--color-secondary-2);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .servicos-title {
+        color: var(--color-neutral-1);
+        font-size: clamp(2.2rem, 5vw, 3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-top: 8px;
+
+        span {
+            color: var(--color-primary-2);
+        }
+    }
+
+    .servicos-description {
+        color: var(--color-neutral-2);
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 500px;
+        margin-top: 12px;
+    }
+
+    .servicos-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 380px;
+        margin-top: 32px;
+    }
+
+    .plan-card {
+        position: relative;
+        background-color: var(--color-neutral-4);
+        border: 1px solid var(--color-neutral-3);
+        border-radius: 12px;
+        padding: 28px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        i {
+            color: var(--color-primary-2);
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        .plan-name {
+            color: var(--color-neutral-1);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .plan-desc {
+            color: var(--color-neutral-2);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .plan-price {
+            color: var(--color-neutral-1);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+
+            .plan-period {
+                color: var(--color-neutral-3);
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .plan-card--featured {
+        border-color: var(--color-secondary-2);
+
+        i {
+            color: var(--color-secondary-2);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            background-color: var(--color-secondary-2);
+            color: var(--color-secondary-3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    #servicos {
+        padding: 80px 4%;
+
+        .servicos-grid {
+            flex-direction: row;
+            max-width: 1000px;
+            align-items: stretch;
+        }
+
+        .plan-card {
+            flex: 1;
+        }
+
+        .plan-card--featured {
+            transform: translateY(-12px);
+        }
+    }
+}
