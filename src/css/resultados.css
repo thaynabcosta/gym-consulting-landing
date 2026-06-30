@@ -1,0 +1,107 @@
+#resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 32px;
+
+    .section-label {
+        color: var(--color-secondary-2);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .resultados-title {
+        color: var(--color-neutral-1);
+        font-size: clamp(2.2rem, 5vw, 3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-top: 8px;
+
+        span {
+            color: var(--color-primary-2);
+        }
+    }
+
+    .resultados-description {
+        color: var(--color-neutral-2);
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 500px;
+        margin-top: 12px;
+    }
+
+    .resultados-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        max-width: 380px;
+        margin-top: 32px;
+    }
+
+    .result-card {
+        background-color: var(--color-neutral-4);
+        border: 1px solid var(--color-neutral-3);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: left;
+    }
+
+    .result-images {
+        display: flex;
+        gap: 8px;
+
+        .result-image-placeholder {
+            flex: 1;
+            aspect-ratio: 3/4;
+            background-color: var(--color-neutral-5);
+            border: 1px dashed var(--color-neutral-3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                color: var(--color-neutral-3);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .result-quote {
+        color: var(--color-neutral-1);
+        font-size: 0.95rem;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .result-author {
+        color: var(--color-secondary-2);
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 769px) {
+    #resultados {
+        padding: 80px 4%;
+
+        .resultados-grid {
+            flex-direction: row;
+            max-width: 1100px;
+            align-items: stretch;
+        }
+
+        .result-card {
+            flex: 1;
+        }
+    }
+}
