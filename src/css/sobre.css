@@ -81,21 +81,34 @@
 
 @media (min-width: 769px) {
     #sobre {
-        flex-direction: row;
-        text-align: left;
+        display: grid;
+        grid-template-columns: minmax(280px, 380px) 1fr;
         align-items: center;
-        gap: 64px;
+        gap: 48px;
+        max-width: 1120px;
+        margin: 0 auto;
         padding: 80px 4%;
+    }
 
-        .sobre-image {
-            width: clamp(320px, 35%, 420px);
-            flex-shrink: 0;
-        }
+    #sobre .sobre-image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 20px;
+    }
 
-        .sobre-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    #sobre .sobre-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        max-width: 560px;
+    }
+
+    #sobre .sobre-title,
+    #sobre .sobre-description,
+    #sobre .sobre-values {
+        margin: 0;
     }
 }

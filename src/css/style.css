@@ -78,14 +78,20 @@ a.btn {
 #home {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     align-items: center;
-    min-height: calc(100vh - 96px);
-    padding: 32px;
     padding-top: clamp(0px, 5vw, 32px);
+    gap: 16px;
+    padding: 24px 24px 40px;
+    min-height: auto;
 
     .home-image {
-        width: clamp(300px, 50%, 400px);
+        width: clamp(150px, 24vw, 210px); /* bem menor para caber tudo com folga */
+        aspect-ratio: 1 / 1; /* círculo perfeito */
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center; /* mantém cabeça e ombros bem enquadrados */
+        border: 2px solid var(--color-primary-2);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
     }
 
     .home-title {
@@ -93,8 +99,10 @@ a.btn {
         text-align: center;
         font-size: clamp(3rem, 5vw, 4.3rem);
         text-transform: uppercase;
-        line-height: 1.2;
         max-width: 700px;
+        margin-top: 8px;
+        font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+        line-height: 1.15;
 
         span {
             color: var(--color-primary-2);
@@ -113,5 +121,20 @@ a.btn {
         display: flex;
         gap: 12px;
         margin-top: 12px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 84px; /* compensa o header fixo ao clicar nos links */
+}
+
+@media (min-width: 769px) {
+    #home {
+        min-height: calc(100vh - 76px);
+        justify-content: center;
     }
 }
